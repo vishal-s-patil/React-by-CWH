@@ -1,7 +1,7 @@
 import react, {useState} from "react";
 import './Textutilscss.css'
 
-export default function TextUtils(props)
+export default function TextUtils()
 {
     let handleUpperCase = () => {
         console.log("upper");
@@ -23,7 +23,6 @@ export default function TextUtils(props)
     const [text, setText] = useState("")
     return (
         <>
-        <title>{props.title}</title>
         <div className="container">
         <textarea cols="30" rows="10" value={text} onChange={handleOnChange} className="text-area"></textarea>
 
