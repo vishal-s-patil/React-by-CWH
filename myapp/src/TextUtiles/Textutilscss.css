@@ -2,7 +2,7 @@
     margin: 0px 0px;
     padding: 0px 0px;
 }
-.text-area{
+.textArea{
     color: red;
     margin: 10px 10px;
 }
@@ -15,10 +15,6 @@
     width: 80vw;
     margin: auto;
 }
-
-.upper-btn{
-    margin: 10px 10px;
-}
-.lower-btn{
+.btnn{
     margin: 10px 10px;
 }
