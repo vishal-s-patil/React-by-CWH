@@ -3,9 +3,23 @@ import './App.css';
 import TextUtils from './TextUtiles/TextUtils';
 import DarkMode from './DarkMode/DarkMode';
 import Navbar from './Navbar/Navbar'
+import About from './About/About'
+import Alert from './Alert/Alert'
 import react, {useState} from 'react';
 
 function App() {
+  const [alert, setAlert] = useState(null);
+
+  const showAlert = (type, message)=>{
+    setAlert({
+      type : type,
+      msg : message
+    })
+    setTimeout(() => {
+      setAlert(null);
+    }, 700);
+  }
+
   const [mode, setMode] = useState('light');
 
   const [myStyle, setStyle] = useState({
@@ -16,6 +30,7 @@ function App() {
   const changeMode = ()=>{
     if(mode === 'light'){
       setMode('dark');
+      showAlert("success", "Dark mode enabled");
       document.body.style.backgroundColor = 'black';
       document.body.style.color = 'white';
       setStyle({
@@ -31,14 +46,17 @@ function App() {
         color : 'black',
         backgroundColor : 'white'
       })
+      showAlert("warning", "Dark mode disabled");
     }
   }
 
   return (
     <>
-    <Navbar mode={mode} myStyle={myStyle} changeMode={changeMode}/>
-    <TextUtils changeMode={changeMode} mode={mode} myStyle={myStyle}/>
-    {/* <DarkMode/> */}
+      <Navbar mode={mode} myStyle={myStyle} changeMode={changeMode}/>
+      <Alert alert={alert}/>
+      <TextUtils mode={mode} myStyle={myStyle}/>
+      {/* <DarkMode/> */}
+      <About/>
     </>
   );
 }

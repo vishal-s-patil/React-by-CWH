@@ -35,15 +35,17 @@ export default function TextUtils(props)
     return (
         <>
         <div className="container" style={props.myStyle}>
-            <textarea cols="30" rows="10" value={text} onChange={handleOnChange} className="textArea" style={props.myStyle}></textarea>
+            <textarea cols="100" rows="9" value={text} onChange={handleOnChange} className="textArea" style={props.myStyle}></textarea>
 
-            <button onClick={handleUpperCase} className="btnn" style={props.myStyle}>convert to upper case</button>
+            <div className="myBtns">
+                <button onClick={handleUpperCase} className="btnn" style={props.myStyle}>convert to upper case</button>
 
-            <button onClick={handleLowerCase} className="btnn" style={props.myStyle}>convert to lower case </button>
+                <button onClick={handleLowerCase} className="btnn" style={props.myStyle}>convert to lower case </button>
 
-            <button onClick={handleExtraSpaces} className="btnn" style={props.myStyle}>Remove Extra Spaces</button>
+                <button onClick={handleExtraSpaces} className="btnn" style={props.myStyle}>Remove Extra Spaces</button>
 
-            <button onClick={handleCopy} className="btnn" style={props.myStyle}>copy text</button>
+                <button onClick={handleCopy} className="btnn" style={props.myStyle}>copy text</button>
+            </div>
 
 
             <p>word count : {text.split(" ").length}</p>
