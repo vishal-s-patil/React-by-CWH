@@ -1,5 +1,6 @@
 import react, {useState} from "react";
 import './Navbar.css'
+import {Link} from 'react-router-dom';
 
 function Navbar(props){
     const [myStyle, setStyle] = useState({
@@ -14,10 +15,12 @@ function Navbar(props){
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        {/* <a class="nav-link active" aria-current="page" href="/home">Home</a> */}
+                        <Link class="nav-link active" aria-current="page" to="/home">Home</Link>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        {/* <a class="nav-link" href="/about">About</a> */}
+                        <Link class="nav-link" to="/about">About</Link>
                         </li>
                     </ul>
                 </div>

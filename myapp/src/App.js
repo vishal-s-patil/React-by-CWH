@@ -6,6 +6,12 @@ import Navbar from './Navbar/Navbar'
 import About from './About/About'
 import Alert from './Alert/Alert'
 import react, {useState} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -54,11 +60,19 @@ function App() {
 
   return (
     <>
-      <Navbar mode={mode} myStyle={myStyle} changeMode={changeMode}/>
-      <Alert alert={alert}/>
-      <TextUtils mode={mode} myStyle={myStyle}/>
-      {/* <DarkMode/> */}
-      <About/>
+    <Router>
+        <Navbar mode={mode} myStyle={myStyle} changeMode={changeMode}/>
+        <Alert alert={alert}/>
+        <Switch>
+          <Route path="/home">
+            <TextUtils mode={mode} myStyle={myStyle}/>
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </Switch>
+        {/* <DarkMode/> */}
+      </Router>
     </>
   );
 }
