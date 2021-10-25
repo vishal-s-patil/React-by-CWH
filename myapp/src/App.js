@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 import TextUtils from './TextUtiles/TextUtils';
 import DarkMode from './DarkMode/DarkMode';
@@ -30,6 +30,7 @@ function App() {
   const changeMode = ()=>{
     if(mode === 'light'){
       setMode('dark');
+      // document.title = 'dark'
       showAlert("success", "Dark mode enabled");
       document.body.style.backgroundColor = 'black';
       document.body.style.color = 'white';
@@ -40,6 +41,7 @@ function App() {
     }
     else{
       setMode('light');
+      // document.title = 'light'
       document.body.style.backgroundColor = 'white';
       document.body.style.color = 'black';
       setStyle({
