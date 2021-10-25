@@ -11,12 +11,13 @@ function Navbar(props){
     return (
         <nav class={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`} id="myNavbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">TextUtiles</a>
+                {/* <a class="navbar-brand" href="/home">TextUtiles</a> */}
+                <Link class="navbar-brand" to="/">TextUtiles</Link>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                        {/* <a class="nav-link active" aria-current="page" href="/home">Home</a> */}
-                        <Link class="nav-link active" aria-current="page" to="/home">Home</Link>
+                        {/* <a class="nav-link active" aria-current="page" href="/">Home</a> */}
+                        <Link class="nav-link active" aria-current="page" to="/">Home</Link>
                         </li>
                         <li class="nav-item">
                         {/* <a class="nav-link" href="/about">About</a> */}

@@ -64,10 +64,10 @@ function App() {
         <Navbar mode={mode} myStyle={myStyle} changeMode={changeMode}/>
         <Alert alert={alert}/>
         <Switch>
-          <Route path="/home">
+          <Route exact path="/">
             <TextUtils mode={mode} myStyle={myStyle}/>
           </Route>
-          <Route path="/about">
+          <Route exact path="/about">
             <About />
           </Route>
         </Switch>
