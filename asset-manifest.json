@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/React-by-CWH/static/css/main.b7291135.chunk.css",
+    "main.js": "/React-by-CWH/static/js/main.980ab832.chunk.js",
+    "main.js.map": "/React-by-CWH/static/js/main.980ab832.chunk.js.map",
+    "runtime-main.js": "/React-by-CWH/static/js/runtime-main.3c58fc66.js",
+    "runtime-main.js.map": "/React-by-CWH/static/js/runtime-main.3c58fc66.js.map",
+    "static/js/2.9833ef70.chunk.js": "/React-by-CWH/static/js/2.9833ef70.chunk.js",
+    "static/js/2.9833ef70.chunk.js.map": "/React-by-CWH/static/js/2.9833ef70.chunk.js.map",
+    "index.html": "/React-by-CWH/index.html",
+    "static/css/main.b7291135.chunk.css.map": "/React-by-CWH/static/css/main.b7291135.chunk.css.map",
+    "static/js/2.9833ef70.chunk.js.LICENSE.txt": "/React-by-CWH/static/js/2.9833ef70.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/React-by-CWH/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3c58fc66.js",
+    "static/js/2.9833ef70.chunk.js",
+    "static/css/main.b7291135.chunk.css",
+    "static/js/main.980ab832.chunk.js"
+  ]
+}
