@@ -74,36 +74,15 @@ function App() {
         color : 'white',
         backgroundColor : '#212529'
       })
+      document.body.style.color = 'white';
     }
     else if(cls === 'light'){
+      document.body.style.color = '#212529';
       setStyle({
-        color : 'white',
+        color : '#212529',
         backgroundColor : '#f8f9fa'
       })
-      document.body.style.color = 'dark';
     }
-    // if(mode === 'light'){
-    //   setMode('dark');
-    //   // document.title = 'dark'
-    //   showAlert("success", "Dark mode enabled");
-    //   document.body.style.backgroundColor = 'black';
-    //   document.body.style.color = 'white';
-    //   setStyle({
-    //     color : 'white',
-    //     backgroundColor : 'black'
-    //   })
-    // }
-    // else{
-    //   setMode('light');
-    //   // document.title = 'light'
-    //   document.body.style.backgroundColor = 'white';
-    //   document.body.style.color = 'black';
-    //   setStyle({
-    //     color : 'black',
-    //     backgroundColor : 'white'
-    //   })
-    //   showAlert("warning", "Dark mode disabled");
-    // }
   }
 
   return (
@@ -119,7 +98,7 @@ function App() {
             <TextUtils mode={mode} myStyle={myStyle}/>
           </Route>
           <Route exact path="/about">
-            <About />
+            <About myStyle={myStyle}/>
           </Route>
         </Switch>
         {/* <DarkMode/> */}

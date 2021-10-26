@@ -3,10 +3,6 @@ import './Navbar.css'
 import {Link} from 'react-router-dom';
 
 function Navbar(props){
-    const [myStyle, setStyle] = useState({
-        color : 'black',
-        backgroundColor : 'white'
-    })
 
     return (
         <nav class={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`} id="myNavbar">
@@ -17,7 +13,7 @@ function Navbar(props){
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                         {/* <a class="nav-link active" aria-current="page" href="/">Home</a> */}
-                        <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+                        <Link class="nav-link" aria-current="page" to="/">Home</Link>
                         </li>
                         <li class="nav-item">
                         {/* <a class="nav-link" href="/about">About</a> */}

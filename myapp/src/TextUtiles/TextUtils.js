@@ -49,7 +49,7 @@ export default function TextUtils(props)
             </div>
 
 
-            <p>word count : {text.split(" ").filter((ele) => {return ele.length !== 0}).length}</p>
+            <p>word count : {text.split(/\s+/).filter((ele) => {return ele.length !== 0}).length}</p>
             <p>characters count : {text.length}</p>
         </div>
         </>
