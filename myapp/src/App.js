@@ -67,6 +67,9 @@ function App() {
           <Route exact path="/">
             <TextUtils mode={mode} myStyle={myStyle}/>
           </Route>
+          <Route exact path="/React-by-CWH">
+            <TextUtils mode={mode} myStyle={myStyle}/>
+          </Route>
           <Route exact path="/about">
             <About />
           </Route>
