@@ -23,6 +23,7 @@ export default function TextUtils(props)
     let handleCopy = () => {
         let textToSelect = document.getElementsByClassName("textArea")[0];
         textToSelect.select();
+        document.getSelection().removeAllRanges();
         navigator.clipboard.writeText(textToSelect.value);
     }
 
@@ -38,17 +39,17 @@ export default function TextUtils(props)
             <textarea cols="100" rows="9" value={text} onChange={handleOnChange} className="textArea" style={props.myStyle}></textarea>
 
             <div className="myBtns">
-                <button onClick={handleUpperCase} className="btnn" style={props.myStyle}>convert to upper case</button>
+                <button disabled={text.length === 0} onClick={handleUpperCase} className="btnn" style={props.myStyle}>convert to upper case</button>
 
-                <button onClick={handleLowerCase} className="btnn" style={props.myStyle}>convert to lower case </button>
+                <button disabled={text.length === 0} onClick={handleLowerCase} className="btnn" style={props.myStyle}>convert to lower case </button>
 
-                <button onClick={handleExtraSpaces} className="btnn" style={props.myStyle}>Remove Extra Spaces</button>
+                <button disabled={text.length === 0} onClick={handleExtraSpaces} className="btnn" style={props.myStyle}>Remove Extra Spaces</button>
 
-                <button onClick={handleCopy} className="btnn" style={props.myStyle}>copy text</button>
+                <button disabled={text.length === 0} onClick={handleCopy} className="btnn" style={props.myStyle}>copy text</button>
             </div>
 
 
-            <p>word count : {text.split(" ").length}</p>
+            <p>word count : {text.split(" ").filter((ele) => {return ele.length !== 0}).length}</p>
             <p>characters count : {text.length}</p>
         </div>
         </>
