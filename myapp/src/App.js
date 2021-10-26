@@ -33,29 +33,77 @@ function App() {
     backgroundColor : 'white'
   })
 
-  const changeMode = ()=>{
-    if(mode === 'light'){
-      setMode('dark');
-      // document.title = 'dark'
-      showAlert("success", "Dark mode enabled");
-      document.body.style.backgroundColor = 'black';
-      document.body.style.color = 'white';
+  const removeClassList = () => {
+    document.body.classList.remove('bg-danger');
+    document.body.classList.remove('bg-success');
+    document.body.classList.remove('bg-primary');
+    document.body.classList.remove('bg-warning');
+    document.body.classList.remove('bg-dark');
+    document.body.classList.remove('bg-light');
+  }
+
+  const changeMode = (cls)=>{
+    removeClassList();
+    document.body.classList.add('bg-'+cls);
+    if(cls === 'danger'){
       setStyle({
         color : 'white',
-        backgroundColor : 'black'
+        backgroundColor : '#dc3545'
       })
     }
-    else{
-      setMode('light');
-      // document.title = 'light'
-      document.body.style.backgroundColor = 'white';
-      document.body.style.color = 'black';
+    else if(cls === 'primary'){
       setStyle({
-        color : 'black',
-        backgroundColor : 'white'
+        color : 'white',
+        backgroundColor : '#007bff'
       })
-      showAlert("warning", "Dark mode disabled");
     }
+    else if(cls === 'warning'){
+      setStyle({
+        color : 'white',
+        backgroundColor : '#ffc107'
+      })
+    }
+    else if(cls === 'success'){
+      setStyle({
+        color : 'white',
+        backgroundColor : '#198754'
+      })
+    }
+    else if(cls === 'dark'){
+      setStyle({
+        color : 'white',
+        backgroundColor : '#212529'
+      })
+    }
+    else if(cls === 'light'){
+      setStyle({
+        color : 'white',
+        backgroundColor : '#f8f9fa'
+      })
+      document.body.style.color = 'dark';
+    }
+    // if(mode === 'light'){
+    //   setMode('dark');
+    //   // document.title = 'dark'
+    //   showAlert("success", "Dark mode enabled");
+    //   document.body.style.backgroundColor = 'black';
+    //   document.body.style.color = 'white';
+    //   setStyle({
+    //     color : 'white',
+    //     backgroundColor : 'black'
+    //   })
+    // }
+    // else{
+    //   setMode('light');
+    //   // document.title = 'light'
+    //   document.body.style.backgroundColor = 'white';
+    //   document.body.style.color = 'black';
+    //   setStyle({
+    //     color : 'black',
+    //     backgroundColor : 'white'
+    //   })
+    //   showAlert("warning", "Dark mode disabled");
+    // }
   }
 
   return (

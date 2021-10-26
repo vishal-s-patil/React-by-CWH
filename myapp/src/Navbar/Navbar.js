@@ -26,9 +26,13 @@ function Navbar(props){
                     </ul>
                 </div>
 
-                <div className="form-check form-switch">
-                    <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.changeMode}/>
-                    <label className="form-check-label" HTMLFor="flexSwitchCheckDefault">Enable dark mode</label>
+                <div className="d-flex">
+                    <div className="bg-primary rounded mx-1" onClick={() => {props.changeMode('primary')}} style={{height : '22px', width : '22px',border : '1px solid #00ffe5'}}></div>
+                    <div className="bg-warning rounded mx-1" onClick={() => {props.changeMode('warning')}} style={{height : '22px', width : '22px',border : '1px solid #00ffe5'}}></div>
+                    <div className="bg-success rounded mx-1" onClick={() => {props.changeMode('success')}} style={{height : '22px', width : '22px',border : '1px solid #00ffe5'}}></div>
+                    <div className="bg-danger rounded mx-1" onClick={() => {props.changeMode('danger')}} style={{height : '22px', width : '22px',border : '1px solid #00ffe5'}}></div>
+                    <div className="bg-light rounded mx-1" onClick={() => {props.changeMode('light')}} style={{height : '22px', width : '22px',border : '1px solid #00ffe5'}}></div>
+                    <div className="bg-dark rounded mx-1" onClick={() => {props.changeMode('dark')}} style={{height : '22px', width : '22px', border : '1px solid #00ffe5'}}></div>
                 </div>
             </div>
         </nav>
